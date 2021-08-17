@@ -30,5 +30,15 @@ object Functions extends App{
   }
   println(aBigFunction(3))
 
+  def greeting(name: String, age: Int): String =
+    "Hi, my name is " + name + " and I am " + age + " years old. "
+    println(greeting("Kelvin", 21))
 
+  def factorial(n: Int): Int =
+    if (n <= 0) 1
+    else n * factorial(n-1)
+  println(factorial(5))
+
+  def fibonacci(n: Int): Int =
+    if (n <= 1)
 }
