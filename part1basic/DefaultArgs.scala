@@ -1,4 +1,4 @@
-package lectures.chapter2
+package lectures.part1basic
 
 object DefaultArgs extends App{
 
