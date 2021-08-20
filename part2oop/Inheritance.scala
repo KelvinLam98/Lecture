@@ -34,7 +34,7 @@ object Inheritance extends App {
 
   //overriding
   class Dog extends Animal {
-    //super is used to call the function in super class(parent) 
+    //super is used to call the function in super class(parent)
     super.eat
     //override val creatureType: String = "dog is domestic"
     override def eat = println("dog eat")
