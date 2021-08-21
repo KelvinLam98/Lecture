@@ -1,6 +1,7 @@
 package lectures.part1basic
 
 import scala.annotation.tailrec
+import scala.jdk.Accumulator
 
 object Recursion extends  App{
 
@@ -25,6 +26,18 @@ object Recursion extends  App{
   }
 
   println(anotherFactorial(10))
+
+  def test(x: Int): Int = {
+    @tailrec
+    def testHelper(y: Int, z: Int): Int = {
+      if (y <= 1) z
+      else testHelper(y-1, y+z )
+    }
+
+    testHelper(x, 1)
+
+  }
+  println(test(8))
 
   /*
     anotherFactorial(10) = factHelper(10, 1)

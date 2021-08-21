@@ -1,8 +1,8 @@
 package lectures.part1basic
 
 object Functions extends App{
-
-  def aFunction(a: String, b: Int): String = {
+//encourage write return type
+  def aFunction(a: String, b: Int) = {
     a + " " + b
   }
 
@@ -55,4 +55,10 @@ object Functions extends App{
   println(isPrime(3))
   println(isPrime(30))
   println(isPrime(1237))
+
+  def add(n: Int): Int = {
+    def addition(x: Int, y: Int): Int = x + y
+    addition(n, n*2)
+  }
+  println(add(3))
 }

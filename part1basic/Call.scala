@@ -13,6 +13,9 @@ object Call extends App{
 
   calledByValue(System.nanoTime())
   calledByName(System.nanoTime())
+  calledByName{
+    System.nanoTime()+10
+  }
 
   def infinite(): Int = 1 + infinite()
   def printFirst(x: Int, y: => Int) = println(x)

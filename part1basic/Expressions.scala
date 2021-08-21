@@ -26,10 +26,10 @@ object Expressions extends App{
   //Instructions (DO) vs Expressions (value)
 
   // IF expression
-  val aCondition = true
-  val aConditionValue = if(aCondition) 5 else 3
+  //val aCondition = true
+  val aConditionValue = if(x > 3) "x is more than 3" else "x is less than or equal 3"
   println(aConditionValue)
-  println(if(aCondition)5 else 3)
+  println(if(x == 3 )"x is equal to 3" else "x is not equal to 3")
 
   //do not use this method again
   var i = 0
