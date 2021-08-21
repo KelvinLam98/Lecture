@@ -10,7 +10,7 @@ object ValueVariableTypes extends App{
 
   val aString: String = "hello"
   val anotherString = "goodbye"
-
+  println(aString)
   val aBoolean: Boolean = false
   val aChar: Char = 'a'
   val anInt: Int = x
@@ -21,5 +21,5 @@ object ValueVariableTypes extends App{
 
   //variables
   var aVariable: Int = 21
-  aVariable = 5 // side effects
+  aVariable = 5 // side effects (not encourage)
 }

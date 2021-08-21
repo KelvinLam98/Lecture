@@ -12,11 +12,11 @@ object StringOps extends App{
 
   println(str.substring(7,11)) //range 7 to 11 include space
 
-  println(str.split(" ").toList)
+  println(str.split(",").toList)
 
-  println(str.startsWith("Hello"))
+  println(str.startsWith("Scala"))
 
-  println(str.replace(" ", "-"))
+  println(str.replace("Hello", "HI"))
 
   println(str.toUpperCase())
 
@@ -47,4 +47,10 @@ object StringOps extends App{
   println(raw"This is a \n newline")
   val escaped = "This is a \n newline"
   println(raw"$escaped")
+
+  val volume = 25
+  val price = 30.50f
+  val myname = "Kelvin"
+  val convo = f"$myname, you need to pay RM $price%2.2f and drink this med $volume ml every day twice"
+  println(convo)
 }
