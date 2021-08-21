@@ -1,11 +1,14 @@
 package lectures.part2oop
 
-
+//def this ???
 object OObasic extends App {
 
   val person = new Person("John", 26)
   println(person.x)
   person.greet("Daniel")
+  person.greet()
+
+  val person2 = new Person("Kelvin")
 
   val author = new Writer("Kelvin", "Lam", 1998)
   val novel = new Novel("Jungle", 2021, author)
@@ -15,15 +18,14 @@ object OObasic extends App {
   println(novel.isWrittenBy(author))
 
   val counter = new Counter
-  counter.increment.print
-  counter.increment.increment.increment.print
-  counter.decrement(5).print
+  counter.increment.print()
+  counter.increment.increment.increment.print()
+  counter.decrement(5).print()
 }
 
 //constructor
 class Person(name: String , val age: Int) {
   val x = 21
-  println(5)
 
   //method
   def greet(name: String): Unit = println(s"${this.name} says: Hi, $name")
@@ -32,6 +34,7 @@ class Person(name: String , val age: Int) {
   def greet(): Unit = println(s"Hi, I am $name")
 
   //multiple constructor
+  //can call class with diff ways
   def this(name: String) = this(name, 0)
   def this() = this("John Doe")
 }
@@ -66,13 +69,13 @@ Counter class
  */
 
 class Counter(val count: Int = 0){
-  def increment = {
+  def increment: Counter = {
     println("Increment")
     new Counter(count + 1)
   }
 
-  def decrement = {
-    println("Increment")
+  def decrement: Counter = {
+    println("Decrement")
     new Counter(count - 1)
   }
   def increment(n: Int): Counter = {
@@ -83,7 +86,7 @@ class Counter(val count: Int = 0){
     if (n<=0) this
     else decrement.decrement(n-1)
   }
-  def print = println(count)
+  def print(): Unit = println(count)
 
 }
 
