@@ -44,9 +44,4 @@ object Generics extends App {
     class Cage
   val cage = new Cage(new Dog)
    */
-
-
-
-
-
 }
