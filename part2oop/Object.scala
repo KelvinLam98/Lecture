@@ -7,8 +7,8 @@ object Object extends App {
     val eyes= 2
     def fly: Boolean = false
 
-    //factory method
-    def from(sibling: Person, cousin: Person): Person = new Person("Bob")
+    //factory method, use apply to make thing easier
+    def apply(mother: Person, father: Person): Person = new Person("Bob")
   }
 
   class Person(val name: String) {
@@ -30,7 +30,7 @@ object Object extends App {
   println(kel == jim)
   //false because kel and jim are two different instances
 
-  val bob = Person.from(kel, jim) //Person(kel, jim) or Person.apply(kel, jim) also can
+  val bob = Person(kel, jim) //Person(kel, jim) or Person.apply(kel, jim) also can
 
   //Scala Application = Scala Object
   //def main(args: Array[String]): Unit but normally use extends App
