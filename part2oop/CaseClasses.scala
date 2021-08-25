@@ -9,11 +9,12 @@ object CaseClasses extends App {
   case class Person(name: String, age: Int)
 
   //1. class parameters are fields
+  //without case cannot
   val jim = new Person("Jim", 34)
   println(jim.name)
 
   //2. sensible toString
-  //
+  //println(instance) = println(instance.toString)
   println(jim.toString)
   println(jim)
 
@@ -23,8 +24,9 @@ object CaseClasses extends App {
 
   //4. copy method
   val jim3 = jim.copy(age=21)
+  println(jim3)
 
-  //5. case classes have companion object
+  //5. case classes have companion object (create automatically)
   val thePerson = Person
   val mary = Person("Mary", 25)
 
