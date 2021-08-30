@@ -6,7 +6,7 @@ object Generics extends App {
     //use the type A
     def add[B >: A ](element: B): MyList[B] = ???
   }
-  class MyMap[Key, Value]
+  class MyMap[Key, Value] //can have more than one
   val listOfIntegers = new MyList[Int]
   val listOfString = new MyList[String]
 

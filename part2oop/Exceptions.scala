@@ -3,6 +3,7 @@ package lectures.part2oop
 object Exceptions extends App {
 
 //  val x: String = null
+//  x.length
 //  //  println(x.length) this line crash with a noPointerExceptions
 //  //1. throw exceptions
 //  val y = throw new NullPointerException
@@ -13,10 +14,10 @@ object Exceptions extends App {
   //2. catch exceptions
   def getInt(withExceptions: Boolean): Int =
     if (withExceptions) throw new RuntimeException("No int for you")
-    else 42
+    else 1
 
   val potFail = try {
-    getInt(true)
+    getInt(false) //change true for error
   } catch {
     case e: NullPointerException => println("caught a runtime exceptions")
   } finally {
@@ -28,10 +29,10 @@ object Exceptions extends App {
   }
 
   //3. how to define your own exceptions
-  class MyException extends Exception
-  val exception = new MyException
-
-  throw exception
+//  class MyException extends Exception
+//  val exception = new MyException
+//
+//  throw exception
 
   /*
     1. crash with out of memory error
@@ -82,6 +83,6 @@ object Exceptions extends App {
   }
 
 //  println(PocketCal.add(Int.MaxValue, 10))
-  println(PocketCal.div(2, 0 ))
+  println(PocketCal.div(2, 0))
 
 }

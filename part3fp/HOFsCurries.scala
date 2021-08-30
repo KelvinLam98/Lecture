@@ -25,6 +25,8 @@ object HOFsCurries extends App {
 
   def superAdder: Int => (Int => Int) = (x: Int) => (y: Int) => x + y
   val add3 = superAdder(3)
+  println(add3)
+  println(superAdder)
   println(add3(10))
   println(superAdder(3)(10))
 

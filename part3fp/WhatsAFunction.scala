@@ -11,6 +11,7 @@ object WhatsAFunction extends App {
   println(doubler(2))
 
   //function type = Function[A, B]
+  //"Function" is used for string.toInt
   val stringToIntConverter = new Function[String, Int] {
     override def apply(string: String): Int = string.toInt
   }
@@ -29,6 +30,7 @@ object WhatsAFunction extends App {
   println("Hello","Scala")
 
   //Funtion1[Int, Function1[Int, Int]
+  //get one Int and return function
   val superAdder: Function1[Int, Function1[Int, Int]] = new Function1[Int, Function1[Int, Int]] {
     override def apply(v1: Int): Int => Int = new Function1[Int, Int] {
       override def apply(v2: Int): Int = v1 + v2

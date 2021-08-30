@@ -26,11 +26,12 @@ object AbstractDataTypes extends App{
       3. traits = behavior, abstract class = "thing"
    */
 
+
   abstract class Animal {
     val creatureType: String
     def eat: Unit
   }
-
+//concrete class = cannot have abstract function
   class Dog extends Animal {
     override val creatureType: String = "dog"
     def eat: Unit = println("Dog eat")
@@ -48,10 +49,10 @@ object AbstractDataTypes extends App{
     def eat(animal: Animal) :Unit = println(s"Croc eat ${animal.creatureType}")
   }
 //  Display Output
-//  val dog = new Dog
-//  val croc = new Crocodile
-//  croc.eat
-//  croc.eat(dog)
+  val dog = new Dog
+  val croc = new Crocodile
+  croc.eat
+  croc.eat(dog)
 
 
   abstract class School {
