@@ -4,6 +4,7 @@ object CaseClasses extends App {
 
   /*
     equals, hashCode, toString
+    for data object
    */
 
   case class Person(name: String, age: Int)
@@ -29,14 +30,14 @@ object CaseClasses extends App {
   //5. case classes have companion object (create automatically)
   val thePerson = Person
   val mary = Person("Mary", 25)
+  val kel = Person.apply("kel", 21)
 
-  //6. case classes are serializable
-  //Akka
+  //6. case classes are serializable (distribute system)
 
   //7. case classes have extractor patterns = use in PATTERN MATCHING (will learn later)
 
   case object UK {
     def name: String = "The UK of GB and NI"
-  }
+  } //not important
 
 }

@@ -24,8 +24,13 @@ object PackagingAndImports extends App{
 
   // imports
   val forPackaging = new TryPackage
+  forPackaging.add(3,4)
 
   val date = new Date //first import date
-  val sqlDate = new sDate(115, 0, 4)
+  val sqlDate = new sDate(121 , 2-1, 21)
   println(sqlDate)
+  println(date)
+
+  //from the ForPackaging file
+
 }

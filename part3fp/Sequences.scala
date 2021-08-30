@@ -5,7 +5,7 @@ import javafx.print.Collation
 import scala.reflect.internal.util.Collections
 import scala.util.Random
 
-object Sequences extends  App {
+object Sequences extends App {
 
   //seq
   val aSequence= Seq(1,2,3,4)
@@ -16,7 +16,7 @@ object Sequences extends  App {
   println(aSequence.sorted)
 
   //range
-  val aRange: Seq[Int] = 1 until 10
+  val aRange: Seq[Int] = 1 to 10
   aRange.foreach(println)
 
   (1 to 10).foreach(x => println("Hello"))
@@ -37,7 +37,9 @@ object Sequences extends  App {
 
   //mutation
   numbers(2) = 0
+  threeElements(0) = "5"
   println(numbers.mkString(" "))
+  println(threeElements.mkString(" "))
 
   //arrays and seq
   val numberSeq: Seq[Int] = numbers  //implicit conversion
