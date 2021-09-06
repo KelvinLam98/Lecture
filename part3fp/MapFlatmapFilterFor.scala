@@ -26,7 +26,7 @@ object MapFlatmapFilterFor extends  App {
 
   val forCombinations = for {
     n <- numbers if n % 2 == 0
-    c <- chars
+    c <- chars if c == 'a'
     color <- colors
   } yield "" + c + n + "-" + color
   println(list)
@@ -39,4 +39,6 @@ object MapFlatmapFilterFor extends  App {
   list.map { x =>
     x * 2
   }
+
+
 }
