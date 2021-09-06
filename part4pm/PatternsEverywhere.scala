@@ -29,8 +29,8 @@ object PatternsEverywhere extends App {
   println(tail)
 
   val mappedList = list.map {
-    case v if v % 2 == 0 => v + "is even"
-    case 1 => "the one"
+    case v if v % 2 == 0 => v + " is even"
+    case 1 => " the one"
     case _ => "something else"
   }
 
